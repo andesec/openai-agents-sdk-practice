@@ -241,10 +241,14 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "openai-agents" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "openai-agents", specifier = ">=0.4.2" }]
+requires-dist = [
+    { name = "openai-agents", specifier = ">=0.4.2" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
 
 [[package]]
 name = "httpcore"
