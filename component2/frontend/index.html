@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Transcription &amp; Summarisation Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Audio Transcription &amp; Summary</h1>
+        <p>Upload an audio file to generate a transcription and summary.</p>
+      </header>
+
+      <section class="card">
+        <form id="upload-form">
+          <label for="audio-input" class="form-label">Choose an audio file</label>
+          <input type="file" id="audio-input" name="file" accept="audio/*" required />
+          <button type="submit" id="submit-button">Upload &amp; Transcribe</button>
+        </form>
+        <div id="status" class="status"></div>
+      </section>
+
+      <section id="result-section" class="card hidden">
+        <h2>Transcription</h2>
+        <pre id="transcription-output"></pre>
+      </section>
+
+      <section id="summary-section" class="card hidden">
+        <h2>Summary</h2>
+        <p id="summary-output"></p>
+      </section>
+    </main>
+
+    <template id="spinner-template">
+      <div class="spinner" role="status" aria-live="polite" aria-busy="true"></div>
+    </template>
+
+    <script src="/script.js" type="module"></script>
+  </body>
+</html>
